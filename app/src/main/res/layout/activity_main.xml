@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".presentation.MainActivity">
+
+    <TextView
+        android:id="@+id/dataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="No data"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/receiveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get user data"
+        android:textSize="18sp"
+        android:backgroundTint="@color/purple_200" />
+
+    <EditText
+        android:id="@+id/dataEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:textSize="24sp" />
+
+
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save user name"
+        android:textSize="18sp"
+        android:backgroundTint="@color/purple_200" />
+
+</LinearLayout>
