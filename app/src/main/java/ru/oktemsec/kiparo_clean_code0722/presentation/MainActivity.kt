@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import ru.oktemsec.kiparo_clean_code0722.R
 import ru.oktemsec.kiparo_clean_code0722.data.repository.UserRepositoryImpl
+import ru.oktemsec.kiparo_clean_code0722.data.storage.sharedprefs.SharedPrefUserStorage
 import ru.oktemsec.kiparo_clean_code0722.domain.models.SaveUserNameParam
 import ru.oktemsec.kiparo_clean_code0722.domain.models.UserName
 import ru.oktemsec.kiparo_clean_code0722.domain.usecase.GetUserNameUseCase
@@ -15,7 +16,7 @@ import ru.oktemsec.kiparo_clean_code0722.domain.usecase.SaveUserNameUseCase
 class MainActivity : Activity() {
 
     // user repo
-    private val userRepository by lazy(LazyThreadSafetyMode.NONE) { UserRepositoryImpl(context = applicationContext) }
+    private val userRepository by lazy(LazyThreadSafetyMode.NONE) { UserRepositoryImpl(SharedPrefUserStorage(context = applicationContext)) }
 
     //Init use cases
     private val getUserNameUseCase by lazy(LazyThreadSafetyMode.NONE) { GetUserNameUseCase(userRepository = userRepository) }
