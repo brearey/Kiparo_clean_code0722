@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Kiparo_clean_code0722"
 include ':app'
+include ':data'
+include ':domain'
